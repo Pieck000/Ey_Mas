@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginHorizontal="20dp"
-        android:textSize="30dp"
+        android:textSize="35dp"
         android:text="Selecciona un paquete"
         android:textColor="@color/black"
         android:clickable="false"

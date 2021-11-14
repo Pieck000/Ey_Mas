@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">Ey+</string>
+    <string name="app_description">Organiza Fiestas, Eventos</string>
+    <string name="app_description_2">Y Algo Más!</string>
+
+
+    <string name="app_correo">Correo</string>
+    <string name="app_correo_hint">alguien@example.com</string>
+    <string name="app_password">Contraseña</string>
+    <string name="app_password_hint">******</string>
+    <string name="app_login">Iniciar Sesion</string>
+    <string name="app_singin">Registrarse</string>
+    <string name="app_recupera">Recuperar</string>
+    <string name="app_recutext">¿Olvidaste tu contraseña?</string>
+    <string name="app_registrate">¿Aún no eres parte de Ey+?</string>
+
+    <string name="title_registro">Registro</string>
+    <string name="reg_nombre">Nombre</string>
+    <string name="reg_nombre_hint">Juan</string>
+    <string name="reg_apellido">Apellidos</string>
+    <string name="reg_apellido_hint">Peréz</string>
+    <string name="reg_fechan">Fecha de Nacimiento</string>
+    <string name="reg_fechan_hint">ej. 01/01/1999</string>
+    <string name="reg_telefono">Telefono</string>
+    <string name="reg_telefono_hint">5512435687</string>
+    <string name="reg_correo">Correo</string>
+    <string name="reg_correo_hint">alguien@example.com</string>
+    <string name="reg_password">Contraseña</string>
+    <string name="reg_password_hint">Al menos 6 caracteres</string>
+    <string name="reg_terminos">Aceptar terminos y condiciones</string>
+    <string name="reg_next">Siguiente</string>
+    <string name="reg_back">Cancelar</string>
+
+    <string name="title_paquetes">Elige un Paquete</string>
+    <string name="pqt_next">Siguiente</string>
+    <string name="pqt_back">Atras</string>
+
+
 </resources>

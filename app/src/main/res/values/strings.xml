@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Ey+</string>
-    <string name="app_description">Organiza Fiestas, Eventos</string>
-    <string name="app_description_2">Y Algo Más!</string>
+    <string name="app_description">Con Ey+</string>
+    <string name="app_description_1">Organiza Fiestas, Eventos</string>
+    <string name="app_description_2">y Algo Más!</string>
 
 
     <string name="app_correo">Correo</string>
@@ -35,5 +36,18 @@
     <string name="pqt_next">Siguiente</string>
     <string name="pqt_back">Atras</string>
 
+    <string name="title_revento">Evento</string>
+    <string name="rev_next">Siguiente</string>
+    <string name="rev_back">Atras</string>
+    <string name="rev_nombre">Nombre de tu Evento</string>
+    <string name="rev_nombre_hint">Boda/Cumpleaños/etc</string>
+    <string name="rev_ubica">Ubicación de tu Evento</string>
+    <string name="rev_ubica_hint">Calle: No:</string>
+    <string name="rev_fecha">Fecha de tu Evento</string>
+    <string name="rev_fecha_hint">min. 15 dias a partir de hoy</string>
+    <string name="rev_hora">Hora de tu Evento</string>
+    <string name="rev_hora_hint">ej. 5pm</string>
+
+    <string name="title_pay">Acreditación de PayPal</string>
 
 </resources>

@@ -50,4 +50,7 @@
 
     <string name="title_pay">Acreditación de PayPal</string>
 
+    <string name="title_home">Mis Eventos</string>
+    <string name="hom_logout">Cerrar Sesión</string>
+
 </resources>

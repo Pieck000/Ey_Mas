@@ -66,5 +66,4 @@
         app:iconTint="@color/purple_500"
         android:layout_gravity="center"/>
 
-
 </LinearLayout>

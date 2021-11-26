@@ -34,7 +34,7 @@
 
     <string name="title_paquetes">Elige un Paquete</string>
     <string name="pqt_next">Siguiente</string>
-    <string name="pqt_back">Atras</string>
+    <string name="pqt_back">Cancelar</string>
 
     <string name="title_revento">Evento</string>
     <string name="rev_next">Siguiente</string>

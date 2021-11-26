@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "510211768661",
+    "project_id": "eymas-fa0e0",
+    "storage_bucket": "eymas-fa0e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510211768661:android:535246263f58bb9f912fdc",
+        "android_client_info": {
+          "package_name": "com.isproject.ey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510211768661-v69nouqq457jtmp435bmhvldednc4opq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0meKrfSvdnMjlpego0BHFm7azCZeTteg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510211768661-v69nouqq457jtmp435bmhvldednc4opq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

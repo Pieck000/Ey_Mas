@@ -23,34 +23,29 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioGroup
-                android:id="@+id/rdg_pqt_r"
+                android:id="@+id/rdg_pqt_p"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RadioButton
                     android:id="@+id/rb_pqt1_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"/>
+                    android:layout_marginBottom="109dp"/>
                 <RadioButton
                     android:id="@+id/rb_pqt2_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"/>
+                    android:layout_marginBottom="109dp"/>
                 <RadioButton
                     android:id="@+id/rb_pqt3_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"/>
+                    android:layout_marginBottom="109dp"/>
                 <RadioButton
                     android:id="@+id/rb_pqt4_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"/>
-                <RadioButton
-                    android:id="@+id/rb_pqt5_p"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"/>
+                    android:layout_marginBottom="10dp"/>
             </RadioGroup>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,35 +57,28 @@
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:text="Paquete 1 \nDescripción: \nDuración: \nNube?, Capacidad y Duración"/>
+                    android:text="Paquete 1 \nCapacidad Max: 100 personas - 10 mesas. \nDuración del Servicio: 30 días \nNube con  vigencia de 20 diás despues del evento."/>
                 <TextView
                     android:id="@+id/tv_pqt2_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:text="Paquete 2 \nDescripción: \nDuración: \nNube?, Capacidad y Duración"/>
+                    android:text="Paquete 2 \nDCapacidad Max: 200 personas - 20 mesas \nDuración del Servicio: 40 días \nNube con  vigencia de 30 diás despues del evento."/>
                 <TextView
                     android:id="@+id/tv_pqt3_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:text="Paquete 3 \nDescripción: \nDuración: \nNube?, Capacidad y Duración"/>
+                    android:text="Paquete 3 \nCapacidad Max: 500 personas - 50 mesas \nDuración del Servicio: 60 días \nNube con  vigencia de 60 diás despues del evento."/>
                 <TextView
                     android:id="@+id/tv_pqt4_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:text="Paquete 4 \nDescripción: \nDuración: \nNube?, Capacidad y Duración"/>
-                <TextView
-                    android:id="@+id/tv_pqt5_p"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:text="Paquete 5 \nDescripción: \nDuración: \nNube?, Capacidad y Duración"/>
+                    android:text="Paquete 4 \nCapacidad Max: 1000 personas - 100 mesas \nDuración del Servicio: 90 días \nNube con  vigencia de 90 diás despues del evento."/>
             </LinearLayout>
         </LinearLayout>
         <Button

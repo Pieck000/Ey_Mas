@@ -29,7 +29,7 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
     //Elementos
     EditText etNom, etFecha, etUbica, etHora;
     CheckBox chTyc;
-    Button btNext, btBack;
+    Button btNext;
     //Fecha
     DatePickerDialog dpg;
     Calendar calendar;
@@ -50,8 +50,6 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
 
         btNext = findViewById(R.id.bt_next_rev);
         btNext.setOnClickListener(this);
-        btBack = findViewById(R.id.bt_back_rev);
-        btBack.setOnClickListener(this);
     }
     private void iniciarElementos(){
         etNom = findViewById(R.id.edit_nom_rev);
@@ -76,7 +74,7 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.edit_fecha_rev:
                 calendar = Calendar.getInstance();
                 ANIO = calendar.get(Calendar.YEAR);
-                MES = calendar.get(Calendar.MONTH + 1);
+                MES = calendar.get(Calendar.MONTH );
                 DIA = calendar.get(Calendar.DAY_OF_MONTH);
                 dpg = new DatePickerDialog(this,this,ANIO,MES,DIA);
                 dpg.show();
@@ -117,9 +115,6 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
                         Toast.makeText(this, ""+e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
-                break;
-            case R.id.bt_back_rev:
-
                 break;
         }
     }

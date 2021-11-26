@@ -52,5 +52,6 @@
 
     <string name="title_home">Mis Eventos</string>
     <string name="hom_logout">Cerrar Sesión</string>
+    <string name="hom_nevento">Agregar Evento</string>
 
 </resources>

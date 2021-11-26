@@ -12,7 +12,7 @@ public class Evento {
     public Evento(){}
     public String toString()
     {
-        return "Evento: "+nombre+"\n Fecha: "+fecha+"\n Hora: "+hora+"\n Paquete "+paquete;
+        return "Evento: "+nombre+"\n Fecha: "+fecha+"\n Hora: "+hora+"\n Paquete "+paquete+"\n";
     }
 
     public String getIdEVento() {

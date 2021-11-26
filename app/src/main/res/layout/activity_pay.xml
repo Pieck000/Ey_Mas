@@ -64,6 +64,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="@string/rev_back"
+        android:text="@string/pqt_back"
         android:textSize="20dp"/>
 </LinearLayout>

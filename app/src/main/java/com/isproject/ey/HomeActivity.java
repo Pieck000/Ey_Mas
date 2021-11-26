@@ -28,7 +28,7 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     ListView lvEvt;
-    Button btOut;
+    Button btOut, btAdd;
     //Fire
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -43,7 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         iniciarFB();
-        //
+        //LOGOUT
         btOut = findViewById(R.id.bt_logout_h);
         btOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,26 +54,41 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+        //ADD
+        btAdd = findViewById(R.id.bt_nevento_h);
+        btAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, PaquetesActivity.class);
+                intent.putExtra("usuR", true);
+                startActivity(intent);
+            }
+        });
         //
         lvEvt = findViewById(R.id.lv_eventos_h);
         idAn = mAuth.getCurrentUser().getUid();
         listarDatos();
         //
-        lvEvt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        try {
+            lvEvt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                try {
-                    evento = (Evento)parent.getItemAtPosition(position);
-                    String idEv = evento.getIdEVento().toString();
-                    Toast.makeText(HomeActivity.this, ""+idEv,Toast.LENGTH_LONG).show();
-                    //Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                    //intent.putExtra("idEv", idEv);
-                    //startActivity(intent);
-                }catch (Exception e){
-                    Toast.makeText(HomeActivity.this, e.getMessage(),Toast.LENGTH_LONG).show();
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    try {
+                        evento = (Evento)parent.getItemAtPosition(position);
+                        String idEv = evento.getIdEVento().toString();
+                        Toast.makeText(HomeActivity.this, ""+idEv,Toast.LENGTH_LONG).show();
+                        //Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                        //intent.putExtra("idEv", idEv);
+                        //startActivity(intent);
+                    }catch (Exception e){
+                        Toast.makeText(HomeActivity.this, e.getMessage(),Toast.LENGTH_LONG).show();
+                    }
                 }
-            }
-        });
+            });
+        }catch (Exception e){
+            Toast.makeText(HomeActivity.this, e.getMessage(),Toast.LENGTH_LONG).show();
+        }
+
 
     }
     private void iniciarFB()

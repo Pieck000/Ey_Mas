@@ -30,17 +30,17 @@
                     android:id="@+id/rb_pqt1_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="115dp"/>
+                    android:layout_marginBottom="118dp"/>
                 <RadioButton
                     android:id="@+id/rb_pqt2_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="115dp"/>
+                    android:layout_marginBottom="118dp"/>
                 <RadioButton
                     android:id="@+id/rb_pqt3_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="115dp"/>
+                    android:layout_marginBottom="118dp"/>
                 <RadioButton
                     android:id="@+id/rb_pqt4_p"
                     android:layout_width="match_parent"

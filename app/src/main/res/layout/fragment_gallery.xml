@@ -93,6 +93,7 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"/>
             <RadioGroup
+                android:id="@+id/rg_inv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -118,13 +119,29 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </ScrollView>
-    <Button
-        android:id="@+id/bt_add_inv"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:text="@string/add_inv"
-        android:textSize="18dp"
-        app:icon="@drawable/ic_inv"/>
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/bt_add_inv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/add_inv"
+            android:textSize="18dp"
+            app:icon="@drawable/ic_inv"
+            android:layout_marginHorizontal="5dp"/>
+        <Button
+            android:id="@+id/bt_list_inv"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:icon="@drawable/ic_refresh"
+            android:text="@string/list_inv"
+            android:textSize="18dp"
+            android:layout_marginHorizontal="5dp"/>
+    </LinearLayout>
+
 </LinearLayout>

@@ -74,6 +74,7 @@
     <string name="pases_inv">Pases</string>
     <string name="mesa_inv">No.Mesa</string>
     <string name="nube_inv">Acceso Nube:</string>
-    <string name="add_inv">Agregar Invitados</string>
+    <string name="add_inv">Agregar </string>
+    <string name="list_inv">Listar </string>
 
 </resources>

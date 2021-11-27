@@ -55,16 +55,16 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         iniciarFB();
         iniciarCom(root);
         //
-        try {
+        /**/try {
             databaseReference.child("Evento").child(idEv).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                     evento = snapshot.getValue(Evento.class);
 
                     tvNom.setText(evento.getNombre().toString());
-                    tvUbi.setText(evento.getUbicacion().toString());
-                    tvFech.setText(evento.getFecha().toString());
-                    tvHo.setText(evento.getHora().toString());
+                    tvUbi.setText("Dirección: "+evento.getUbicacion().toString());
+                    tvFech.setText("Fecha: "+evento.getFecha().toString());
+                    tvHo.setText("Hora: "+evento.getHora().toString());
                 }
                 @Override
                 public void onCancelled(@NonNull @NotNull DatabaseError error) {}
@@ -75,9 +75,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         return root;
     }
     private void iniciarCom(View root){
-        btEdit = root.findViewById(R.id.bts_edit_fh);
+        btEdit = root.findViewById(R.id.bt_edit_fh);
         btEdit.setOnClickListener(this);
-        btEvts = root.findViewById(R.id.bt_evts_fh);
+        btEvts = root.findViewById(R.id.bts_evts_fh);
         btEvts.setOnClickListener(this);
         //
         tvNom = root.findViewById(R.id.tv_frhome);
@@ -110,10 +110,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.bts_edit_fh:
-                Toast.makeText(getContext(), "EDIT!", Toast.LENGTH_LONG).show();
+            case R.id.bt_edit_fh:
+                Toast.makeText(getContext(), "EDIT! "+idEv, Toast.LENGTH_LONG).show();
                 break;
-            case R.id.bt_evts_fh:
+            case R.id.bts_evts_fh:
                 Intent intent = new Intent(getActivity(), HomeActivity.class);
                 startActivity(intent);
                 getActivity().finish();

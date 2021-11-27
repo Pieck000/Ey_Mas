@@ -62,11 +62,18 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Mi Evento</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Invitados</string>
+    <string name="menu_slideshow">Listar</string>
 
-    <string name="fr_home">Slideshow</string>
     <string name="fh_edit">Editar Evento</string>
     <string name="fh_evts">Mis Eventos</string>
+
+    <string name="title_inv">Invitados</string>
+    <string name="correo_inv">Correo</string>
+    <string name="familia_inv">Nombre / Familia</string>
+    <string name="pases_inv">Pases</string>
+    <string name="mesa_inv">No.Mesa</string>
+    <string name="nube_inv">Acceso Nube:</string>
+    <string name="add_inv">Agregar Invitados</string>
 
 </resources>

@@ -50,18 +50,18 @@
         android:textColor="@color/purple_500"
         android:gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="120dp"/>
+        android:layout_marginBottom="20dp"/>
     <Button
-        android:id="@+id/bt_evts_fh"
+        android:id="@+id/bt_edit_fh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="260dp"
         android:text="@string/fh_edit"
         android:textSize="18dp"
         app:icon="@drawable/ic_edit"/>
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/bts_edit_fh"
+        android:id="@+id/bts_evts_fh"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="37dp"

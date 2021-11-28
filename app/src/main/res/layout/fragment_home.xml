@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:text="event_ubi"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="15dp"
+        android:layout_marginHorizontal="20dp"
         android:gravity="center"/>
     <TextView
         android:id="@+id/tv_frhome_fech"

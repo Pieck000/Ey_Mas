@@ -11,7 +11,11 @@ public class Invitado {
 
     public Invitado(){}
     public String toString(){
-        return "Nombre/Familia: "+nombreFamilia+"\nCorreo: "+correo+"\nPases: "+pases+"     Mesa: "+Mesa;
+        if(nube == 1){
+            return "Nombre/Familia: "+nombreFamilia+"\nCorreo: "+correo+"\nPases: "+pases+"     Mesa: "+Mesa+"  Nube: Si";
+        }else{
+            return "Nombre/Familia: "+nombreFamilia+"\nCorreo: "+correo+"\nPases: "+pases+"     Mesa: "+Mesa+"  Nube: No";
+        }
     }
 
     public String getIdInvitado() {

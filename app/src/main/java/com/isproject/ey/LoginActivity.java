@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.isproject.ey.firebase.Usuario;
 
 public class LoginActivity extends AppCompatActivity {
-    Button btLogin, btBack;
+    Button btLogin, btBack, btRecu;
     EditText etCorreo, etPass;
     //Fire
     FirebaseDatabase firebaseDatabase;
@@ -70,6 +70,16 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 Toast.makeText(LoginActivity.this, "atras", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+        btRecu = findViewById(R.id.bts_recuperar_lg);
+        btRecu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RecuperarActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

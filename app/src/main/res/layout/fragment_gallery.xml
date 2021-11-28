@@ -113,7 +113,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:layout_marginTop="5dp">
         <ListView
             android:id="@+id/lv_eventos_h"
             android:layout_width="match_parent"

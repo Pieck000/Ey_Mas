@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ey">
+        <activity android:name=".RecuperarActivity"></activity>
+        <activity android:name=".EditeventoActivity" />
         <activity
             android:name=".UimainActivity"
             android:label="@string/title_activity_uimain"
-            android:theme="@style/Theme.Ey.NoActionBar"></activity>
+            android:theme="@style/Theme.Ey.NoActionBar" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".PayActivity" />
         <activity android:name=".EventoActivity" />
         <activity android:name=".PaquetesActivity" />
         <activity android:name=".RegistroActivity" />
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

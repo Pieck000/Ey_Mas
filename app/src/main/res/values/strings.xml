@@ -77,4 +77,12 @@
     <string name="add_inv">Agregar </string>
     <string name="list_inv">Listar </string>
 
+    <string name="title_ede">Editar Evento</string>
+    <string name="save_ede">Guardar</string>
+    <string name="delete_ede">Eliminar Evento</string>
+
+    <string name="tittle_recu">Recuperar Contraseña</string>
+    <string name="correo_recu">Ingresa el correo de tu cuenta Ey+</string>
+    <string name="bt_recu">Recuperar</string>
+
 </resources>

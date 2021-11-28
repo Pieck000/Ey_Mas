@@ -1,9 +1,13 @@
 package com.isproject.ey.ui.gallery;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +34,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.isproject.ey.HomeActivity;
 import com.isproject.ey.R;
+import com.isproject.ey.UimainActivity;
 import com.isproject.ey.databinding.FragmentGalleryBinding;
 import com.isproject.ey.firebase.Evento;
 import com.isproject.ey.firebase.Invitado;
@@ -55,8 +60,11 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
     DatabaseReference databaseReference;
     FirebaseAuth mAuth;
     Invitado inv;
+    Evento evn;
     //
     String idEv;
+    int lim=0;
+    int conteoPases=0;
     private List<Invitado> listaInvitado = new ArrayList<Invitado>();
     ArrayAdapter<Invitado> arrayAdapterItem;
 
@@ -73,7 +81,50 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
         iniciarElementos(root);
         //
         listarDatos();
+        limiteInv();
         llenarLista(listaInvitado);
+        //
+        try {
+            lvInv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    try {
+                        inv = (Invitado) parent.getItemAtPosition(position);
+                        String idIn = inv.getIdInvitado().toString();
+                        String noI = inv.getNombreFamilia().toString();
+                        Toast.makeText(getContext(), ""+idEv,Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder dialog =new AlertDialog.Builder(getContext());
+                        dialog.setTitle("Invitado: \n"+noI);
+                        dialog.setNeutralButton("Ok", null);
+                        dialog.setNegativeButton("Eliminar",new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                /**/
+                                try {
+                                    databaseReference.child("Invitado").child(idIn).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                            Toast.makeText(getContext(), "Eliminado", Toast.LENGTH_LONG).show();
+                                            llenarLista(listaInvitado);
+                                        }
+                                    });
+
+                                }catch (Exception e)
+                                {
+                                    Toast.makeText(getContext(), e.getMessage()+" "+e.getCause(), Toast.LENGTH_LONG).show();
+                                }
+
+                            }
+                        });
+                        dialog.show();
+                    }catch (Exception e){
+                        Toast.makeText(getContext(), e.getMessage(),Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }catch (Exception e){
+            Toast.makeText(getContext(), e.getMessage(),Toast.LENGTH_LONG).show();
+        }
 
         return root;
     }
@@ -116,10 +167,12 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     listaInvitado.clear();
+                    conteoPases =0;
                     for(DataSnapshot objtSnapshot: snapshot.getChildren()){
                         Invitado in = objtSnapshot.getValue(Invitado.class);
                         if(in.getIdEvnt().equals(idEv))
                         {
+                            conteoPases = conteoPases+ in.getPases();
                             listaInvitado.add(in);
                         }
 
@@ -194,7 +247,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                     }
 
                 }else{
-                    Toast.makeText(getContext(), "Campos Vacios", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getContext(), "Campos Vacios", Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.bt_list_inv:
@@ -206,15 +259,61 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
     private boolean mValidar(){
         if(etCorreo.getText().toString().equals("")||etNombre.getText().toString().equals("")||
             etMesa.getText().toString().equals("")||etPases.getText().toString().equals("")){
+            Toast.makeText(getContext(), "Campos Vacios", Toast.LENGTH_LONG).show();
+
             return false;
         }else{
             if(!rbYN.isChecked() && !rbNN.isChecked()){
+                Toast.makeText(getContext(), "Campos Vacios", Toast.LENGTH_LONG).show();
                 return false;
             }
             else {
-                return true;
+                int p = Integer.parseInt(etPases.getText().toString());
+                int m = Integer.parseInt(etMesa.getText().toString());
+                if(p==0){
+                    Toast.makeText(getContext(), "Otorga por lo menos un pase", Toast.LENGTH_LONG).show();
+                    return false;
+                }else if (m==0){
+                    Toast.makeText(getContext(), "Asigna No. de mesa", Toast.LENGTH_LONG).show();
+                    return false;
+                }else {
+                    int limpases = 0;
+                    int pases = Integer.parseInt(etPases.getText().toString());
+                    switch (lim){
+                        case 1:
+                            limpases = 100;
+                            break;
+                        case 2:
+                            limpases = 200;
+                            break;
+                        case 3:
+                            limpases = 500;
+                            break;
+                        case 4:
+                            limpases = 1000;
+                            break;
+                    }
+                    if(limpases-(conteoPases+pases) <= 0){
+                        Toast.makeText(getContext(), "Limite de pases Excedido ", Toast.LENGTH_LONG).show();
+                        return false;
+                    }
+                    else {
+                        return true;
+                    }
+                }
             }
         }
+    }
+    private void limiteInv(){
+        databaseReference.child("Evento").child(idEv).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                evn = snapshot.getValue(Evento.class);
+                lim = Integer.parseInt(evn.getPaquete().toString());
+            }
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {}
+        });
     }
     private void mLimpiar(){
         etCorreo.setText(null);

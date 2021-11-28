@@ -22,6 +22,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.isproject.ey.EditeventoActivity;
 import com.isproject.ey.HomeActivity;
 import com.isproject.ey.R;
 import com.isproject.ey.databinding.FragmentHomeBinding;
@@ -111,7 +112,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         switch (v.getId())
         {
             case R.id.bt_edit_fh:
-                Toast.makeText(getContext(), "EDIT! "+idEv, Toast.LENGTH_LONG).show();
+                Intent intent1 = new Intent(getActivity(), EditeventoActivity.class);
+                intent1.putExtra("idEv",idEv);
+                startActivity(intent1);
+                getActivity().finish();
+                Toast.makeText(getContext(), "Edit!", Toast.LENGTH_LONG).show();
                 break;
             case R.id.bts_evts_fh:
                 Intent intent = new Intent(getActivity(), HomeActivity.class);

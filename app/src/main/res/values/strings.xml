@@ -63,7 +63,7 @@
 
     <string name="menu_home">Mi Evento</string>
     <string name="menu_gallery">Invitados</string>
-    <string name="menu_slideshow">Listar</string>
+    <string name="menu_slideshow">Mesas</string>
 
     <string name="fh_edit">Editar Evento</string>
     <string name="fh_evts">Mis Eventos</string>
@@ -84,5 +84,8 @@
     <string name="tittle_recu">Recuperar Contraseña</string>
     <string name="correo_recu">Ingresa el correo de tu cuenta Ey+</string>
     <string name="bt_recu">Recuperar</string>
+
+    <string name="tittle_Mesas">Mesas de Invitados</string>
+    <string name="num_mesas">Mesa número: </string>
 
 </resources>

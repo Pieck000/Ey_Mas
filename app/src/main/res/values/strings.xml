@@ -64,6 +64,7 @@
     <string name="menu_home">Mi Evento</string>
     <string name="menu_gallery">Invitados</string>
     <string name="menu_slideshow">Mesas</string>
+    <string name="menu_proovedor">Proovedores</string>
 
     <string name="fh_edit">Editar Evento</string>
     <string name="fh_evts">Mis Eventos</string>
@@ -87,5 +88,13 @@
 
     <string name="tittle_Mesas">Mesas de Invitados</string>
     <string name="num_mesas">Mesa número: </string>
+
+    <string name="correo_proov">Correo Proveedor: </string>
+    <string name="servicio_proov">Servicio: </string>
+    <string name="nombre_proov">Nombre Proveedor: </string>
+    <string name="personas_proov">Personal: </string>
+    <string name="telefono_proov">Telefono: </string>
+
+
 
 </resources>

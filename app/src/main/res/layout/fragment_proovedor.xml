@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ui.gallery.GalleryFragment"
+    tools:context=".ui.proveedor.ProovedorFragment"
     android:layout_margin="10dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/correo_inv"
+        android:text="@string/nombre_proov"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginHorizontal="20dp"/>
     <EditText
-        android:id="@+id/edit_correo_inv"
+        android:id="@+id/edit_nom_proov"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Proveedor"
+        android:inputType="textPersonName"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/correo_proov"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginHorizontal="20dp"/>
+    <EditText
+        android:id="@+id/edit_correo_proov"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/app_correo_hint"
@@ -23,40 +40,27 @@
         android:layout_marginHorizontal="20dp"
         android:textSize="18dp"
         android:layout_gravity="center"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/familia_inv"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:layout_marginHorizontal="20dp"/>
-    <EditText
-        android:id="@+id/edit_nomf_inv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Fam. Pérez"
-        android:inputType="textPersonName"
-        android:layout_marginHorizontal="20dp"
-        android:textSize="18dp"
-        android:layout_gravity="center"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp">
         <LinearLayout
-            android:layout_width="80dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp">
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/pases_inv"
+                android:text="@string/personas_proov"
                 android:textColor="@color/black"
                 android:textSize="20dp"/>
             <EditText
-                android:id="@+id/edit_pases_inv"
-                android:layout_width="60dp"
+                android:id="@+id/edit_pers_proov"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:hint="1"
                 android:textAlignment="center"
@@ -64,51 +68,25 @@
                 android:textSize="18dp"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_width="90dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/mesa_inv"
+                android:text="@string/telefono_proov"
                 android:textColor="@color/black"
                 android:textSize="20dp"/>
             <EditText
                 android:id="@+id/edit_mesa_inv"
-                android:layout_width="60dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:hint="1"
+                android:hint="5512437809"
                 android:textAlignment="center"
                 android:inputType="number"
                 android:textSize="18dp"/>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nube_inv"
-                android:textColor="@color/black"
-                android:textSize="20dp"/>
-            <RadioGroup
-                android:id="@+id/rg_inv"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:id="@+id/rb_si_inv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SI"/>
-                <RadioButton
-                    android:id="@+id/rb_no_inv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NO"/>
-            </RadioGroup>
-        </LinearLayout>
+
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -116,7 +94,7 @@
         android:fillViewport="true"
         android:layout_marginTop="5dp">
         <ListView
-            android:id="@+id/lv_eventos_h"
+            android:id="@+id/lv_proov"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </ScrollView>
@@ -126,7 +104,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center">
         <Button
-            android:id="@+id/bt_add_inv"
+            android:id="@+id/bt_add_proov"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -135,7 +113,7 @@
             app:icon="@drawable/ic_inv"
             android:layout_marginHorizontal="5dp"/>
         <Button
-            android:id="@+id/bt_list_inv"
+            android:id="@+id/bt_list_proov"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"

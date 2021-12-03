@@ -22,4 +22,10 @@
         android:name="com.isproject.ey.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_proveedor"
+        android:name="com.isproject.ey.ui.proveedor.ProovedorFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_proovedor" />
 </navigation>

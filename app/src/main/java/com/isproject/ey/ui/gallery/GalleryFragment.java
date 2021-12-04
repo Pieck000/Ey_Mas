@@ -252,7 +252,6 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.bt_list_inv:
                 llenarLista(listaInvitado);
-                Toast.makeText(getContext(), "List", Toast.LENGTH_LONG).show();
                 break;
         }
     }

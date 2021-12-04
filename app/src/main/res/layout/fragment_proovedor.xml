@@ -78,7 +78,7 @@
                 android:textColor="@color/black"
                 android:textSize="20dp"/>
             <EditText
-                android:id="@+id/edit_mesa_inv"
+                android:id="@+id/edit_tel_proov"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="5512437809"

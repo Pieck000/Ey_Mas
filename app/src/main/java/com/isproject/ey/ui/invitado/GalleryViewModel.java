@@ -1,4 +1,4 @@
-package com.isproject.ey.ui.gallery;
+package com.isproject.ey.ui.invitado;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

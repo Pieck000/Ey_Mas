@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -83,6 +84,18 @@ public class ProovedorFragment extends Fragment implements View.OnClickListener{
                         AlertDialog.Builder dialog =new AlertDialog.Builder(getContext());
                         dialog.setTitle("Proovedor: \n"+noPr);
                         dialog.setNeutralButton("Ok", null);
+                        dialog.setPositiveButton("Editar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                try{
+                                    Intent intent = new Intent(getActivity(), EditarProovedor.class);
+                                    intent.putExtra("idPr",idPr);
+                                    startActivity(intent);
+                                }catch (Exception e){
+                                    Toast.makeText(getContext(), e.getMessage()+" "+e.getCause(), Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
                         dialog.setNegativeButton("Eliminar",new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

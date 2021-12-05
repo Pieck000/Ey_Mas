@@ -57,7 +57,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         iniciarCom(root);
         //
         /**/try {
-            databaseReference.child("Evento").child(idEv).addValueEventListener(new ValueEventListener() {
+                databaseReference.child("Evento").child(idEv).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                     evento = snapshot.getValue(Evento.class);

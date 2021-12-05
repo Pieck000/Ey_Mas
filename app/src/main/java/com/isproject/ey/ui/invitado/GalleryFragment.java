@@ -1,4 +1,4 @@
-package com.isproject.ey.ui.gallery;
+package com.isproject.ey.ui.invitado;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -14,13 +14,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -32,12 +29,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.isproject.ey.HomeActivity;
 import com.isproject.ey.R;
-import com.isproject.ey.UimainActivity;
 import com.isproject.ey.databinding.FragmentGalleryBinding;
 import com.isproject.ey.firebase.Evento;
 import com.isproject.ey.firebase.Invitado;
+import com.isproject.ey.ui.proveedor.EditarProovedor;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -96,6 +92,18 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                         AlertDialog.Builder dialog =new AlertDialog.Builder(getContext());
                         dialog.setTitle("Invitado: \n"+noI);
                         dialog.setNeutralButton("Ok", null);
+                        dialog.setPositiveButton("Editar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                try{
+                                    Intent intent = new Intent(getActivity(), EditarInvitado.class);
+                                    intent.putExtra("idInv", idIn);
+                                    startActivity(intent);
+                                }catch (Exception e){
+                                    Toast.makeText(getContext(), e.getMessage()+" "+e.getCause(), Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
                         dialog.setNegativeButton("Eliminar",new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

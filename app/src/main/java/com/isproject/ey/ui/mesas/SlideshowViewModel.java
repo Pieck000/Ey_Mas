@@ -1,4 +1,4 @@
-package com.isproject.ey.ui.slideshow;
+package com.isproject.ey.ui.mesas;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

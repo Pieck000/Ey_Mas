@@ -77,6 +77,8 @@
     <string name="nube_inv">Acceso Nube:</string>
     <string name="add_inv">Agregar </string>
     <string name="list_inv">Listar </string>
+    <string name="edit_inv">Editar Invitado </string>
+
 
     <string name="title_ede">Editar Evento</string>
     <string name="save_ede">Guardar</string>
@@ -94,7 +96,9 @@
     <string name="nombre_proov">Nombre Proveedor: </string>
     <string name="personas_proov">Personal: </string>
     <string name="telefono_proov">Telefono: </string>
-
+    <string name="edit_proov">Editar Proveedor</string>
+    <string name="save_proov">Guardar</string>
+    <string name="cancel_proov">Cancelar</string>
 
 
 </resources>

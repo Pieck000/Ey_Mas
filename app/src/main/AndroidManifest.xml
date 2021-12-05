@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ey">
-        <activity android:name=".RecuperarActivity"></activity>
+        <activity android:name=".ui.invitado.EditarInvitado"></activity>
+        <activity android:name=".ui.proveedor.EditarProovedor" />
+        <activity android:name=".RecuperarActivity" />
         <activity android:name=".EditeventoActivity" />
         <activity
             android:name=".UimainActivity"

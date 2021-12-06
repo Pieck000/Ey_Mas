@@ -20,5 +20,9 @@
             android:id="@+id/nav_proveedor"
             android:icon="@drawable/ic_shop"
             android:title="@string/menu_proovedor" />
+        <item
+            android:id="@+id/nav_cadenero"
+            android:icon="@drawable/ic_security"
+            android:title="@string/menu_cadenero" />
     </group>
 </menu>

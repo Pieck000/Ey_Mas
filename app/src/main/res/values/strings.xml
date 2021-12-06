@@ -65,6 +65,7 @@
     <string name="menu_gallery">Invitados</string>
     <string name="menu_slideshow">Mesas</string>
     <string name="menu_proovedor">Proovedores</string>
+    <string name="menu_cadenero">Cadenero</string>
 
     <string name="fh_edit">Editar Evento</string>
     <string name="fh_evts">Mis Eventos</string>
@@ -99,6 +100,10 @@
     <string name="edit_proov">Editar Proveedor</string>
     <string name="save_proov">Guardar</string>
     <string name="cancel_proov">Cancelar</string>
+
+    <string name="tittle_cadenero">¡Escanea una Invitación!</string>
+    <string name="icon_cadenero">Escanear</string>
+
 
 
 </resources>

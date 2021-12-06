@@ -36,7 +36,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
         android:text="@string/hom_nevento"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        app:icon="@drawable/ic_add"/>
     <Button
         android:id="@+id/bt_logout_h"
         android:layout_width="wrap_content"
@@ -44,6 +45,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="@string/hom_logout"
-        android:textSize="18dp"/>
+        android:textSize="18dp"
+        app:icon="@drawable/ic_out"/>
 
 </LinearLayout>

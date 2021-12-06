@@ -66,6 +66,7 @@
     <string name="menu_slideshow">Mesas</string>
     <string name="menu_proovedor">Proovedores</string>
     <string name="menu_cadenero">Cadenero</string>
+    <string name="menu_perfil">Mi Perfil</string>
 
     <string name="fh_edit">Editar Evento</string>
     <string name="fh_evts">Mis Eventos</string>
@@ -103,6 +104,11 @@
 
     <string name="tittle_cadenero">¡Escanea una Invitación!</string>
     <string name="icon_cadenero">Escanear</string>
+
+    <string name="tittle_perfil">¡Escanea una Invitación!</string>
+    <string name="out_perfil">Cerrar Sesión</string>
+    <string name="correo_perfil">Editar Correo</string>
+    <string name="contra_perfil">Editar Información</string>
 
 
 

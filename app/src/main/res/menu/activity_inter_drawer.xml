@@ -24,5 +24,9 @@
             android:id="@+id/nav_cadenero"
             android:icon="@drawable/ic_security"
             android:title="@string/menu_cadenero" />
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_account"
+            android:title="@string/menu_perfil" />
     </group>
 </menu>

@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +39,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     //
     Button btEdit, btEvts;
     TextView tvNom, tvFech, tvUbi, tvHo, tvCB;
+    ViewFlipper vfImgs;
     //Fire
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -56,7 +59,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         iniciarFB();
         iniciarCom(root);
         //
-        /**/try {
+        int imgs [] = {R.raw.imgey1, R.raw.imgey2, R.raw.imgey3};
+        for(int img: imgs){
+            llenarFlipper(img);
+        }
+        //
+        try {
                 databaseReference.child("Evento").child(idEv).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
@@ -86,7 +94,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         tvUbi = root.findViewById(R.id.tv_frhome_ubi);
         tvHo = root.findViewById(R.id.tv_frhome_time);
         tvCB = root.findViewById(R.id.tv_frhome_cr);
-
+        //
+        vfImgs = root.findViewById(R.id.vf_imgs);
     }
     private void iniciarFB()
     {
@@ -100,6 +109,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
+    }
+    private void llenarFlipper(int img){
+        ImageView imageView = new ImageView(getContext());
+        imageView.setBackgroundResource(img);
+        //
+        vfImgs.addView(imageView);
+        vfImgs.setFlipInterval(3000);
+        vfImgs.setAutoStart(true);
+        //
+        vfImgs.setInAnimation(getContext(), android.R.anim.slide_in_left);
+        vfImgs.setOutAnimation(getContext(), android.R.anim.slide_out_right);
     }
     @Override
     public void onDestroyView() {

@@ -52,26 +52,54 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/tv_pq1_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Paquete 1"
+                    android:textColor="@color/purple_500"/>
+                <TextView
                     android:id="@+id/tv_pqt1_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:text="Paquete 1 \nCapacidad Max: 100 personas - 10 mesas. \nDuración del Servicio: 30 días \nNube con  vigencia de 20 diás despues del evento."/>
+                    android:text="Capacidad Max: 100 personas - 10 mesas. \nDuración del Servicio: 30 días \nNube con  vigencia de 20 diás despues del evento."/>
+                <TextView
+                    android:id="@+id/tv_pq2_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Paquete 2"
+                    android:textColor="@color/purple_500"/>
                 <TextView
                     android:id="@+id/tv_pqt2_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:text="Paquete 2 \nDCapacidad Max: 200 personas - 20 mesas \nDuración del Servicio: 40 días \nNube con  vigencia de 30 diás despues del evento."/>
+                    android:text="Capacidad Max: 200 personas - 20 mesas \nDuración del Servicio: 40 días \nNube con  vigencia de 30 diás despues del evento."/>
+                <TextView
+                    android:id="@+id/tv_pq3_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Paquete 3"
+                    android:textColor="@color/purple_500"/>
                 <TextView
                     android:id="@+id/tv_pqt3_p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textColor="@color/black"
-                    android:text="Paquete 3 \nCapacidad Max: 500 personas - 50 mesas \nDuración del Servicio: 60 días \nNube con  vigencia de 60 diás despues del evento."/>
+                    android:text="Capacidad Max: 500 personas - 50 mesas \nDuración del Servicio: 60 días \nNube con  vigencia de 60 diás despues del evento."/>
+                <TextView
+                    android:id="@+id/tv_pq4_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Paquete 4"
+                    android:textColor="@color/purple_500"/>
                 <TextView
                     android:id="@+id/tv_pqt4_p"
                     android:layout_width="match_parent"

@@ -104,6 +104,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:text="@string/rev_next"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        app:icon="@drawable/ic_next"/>
 
 </LinearLayout>

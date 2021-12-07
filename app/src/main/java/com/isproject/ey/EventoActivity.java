@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.EventLog;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,7 +27,8 @@ import java.util.UUID;
 
 import java.util.Calendar;
 
-public class EventoActivity extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener{
+public class EventoActivity extends AppCompatActivity
+        implements View.OnClickListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
     //Elementos
     EditText etNom, etFecha, etUbica, etHora;
     CheckBox chTyc;
@@ -35,6 +38,9 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
     Calendar calendar;
     private static int ANIO, MES,DIA;
     int monthPicked, anioPicked, dayPicked;
+    //Hora
+    TimePickerDialog tpd;
+    private static int HORA, MIN;
     //FireB
     Evento evnt;
     FirebaseDatabase firebaseDatabase;
@@ -59,6 +65,7 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
         chTyc =  findViewById(R.id.chb_tyc_rev);
 
         etFecha.setOnClickListener(this);
+        etHora.setOnClickListener(this);
     }
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -71,6 +78,13 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.edit_hora_rev:
+                calendar = Calendar.getInstance();
+                HORA = calendar.get(Calendar.HOUR_OF_DAY);
+                MIN = calendar.get(Calendar.MINUTE);
+                tpd = new TimePickerDialog(this, this, HORA, MIN, true);
+                tpd.show();
+                break;
             case R.id.edit_fecha_rev:
                 calendar = Calendar.getInstance();
                 ANIO = calendar.get(Calendar.YEAR);
@@ -161,5 +175,10 @@ public class EventoActivity extends AppCompatActivity implements View.OnClickLis
                 return false;
             }
         }
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        etHora.setText(hourOfDay+":"+minute);
     }
 }

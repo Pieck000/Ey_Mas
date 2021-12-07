@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="30dp"
+    android:layout_margin="25dp"
     tools:context=".LoginActivity">
 
     <TextView
@@ -56,14 +56,16 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="@string/app_login"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:icon="@drawable/ic_login"/>
     <Button
         android:id="@+id/bt_back_lg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/rev_back"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:icon="@drawable/ic_back"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,5 +83,6 @@
         android:textSize="15dp"
         android:text="@string/app_recupera"
         app:iconTint="@color/purple_500"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        app:icon="@drawable/ic_restore"/>
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="40dp"
+    android:layout_margin="25dp"
     tools:context=".RegistroActivity">
 
     <LinearLayout
@@ -140,7 +140,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="@string/reg_next"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            app:icon="@drawable/ic_next"/>
         <Button
             android:id="@+id/bt_back_r"
             android:layout_width="wrap_content"
@@ -148,6 +149,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="@string/reg_back"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            app:icon="@drawable/ic_cancel"/>
     </LinearLayout>
 </ScrollView>

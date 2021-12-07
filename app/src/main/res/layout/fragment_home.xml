@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:text="event_ubi"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
         android:layout_marginHorizontal="20dp"
         android:gravity="center"/>
     <TextView
@@ -57,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="280dp"
         android:text="@string/fh_edit"
         android:textSize="18dp"
         app:icon="@drawable/ic_edit"/>

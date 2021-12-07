@@ -88,7 +88,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/pqt_next"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            app:icon="@drawable/ic_next"/>
         <Button
             android:id="@+id/bt_back_p"
             android:layout_width="wrap_content"
@@ -96,6 +97,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="@string/pqt_back"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            app:icon="@drawable/ic_cancel"/>
     </LinearLayout>
 </ScrollView>

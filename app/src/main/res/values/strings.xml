@@ -46,7 +46,7 @@
     <string name="rev_fecha">Fecha de tu Evento</string>
     <string name="rev_fecha_hint">min. 15 dias a partir de hoy</string>
     <string name="rev_hora">Hora de tu Evento</string>
-    <string name="rev_hora_hint">ej. 5pm</string>
+    <string name="rev_hora_hint">17:00</string>
 
     <string name="title_pay">Acreditación de PayPal</string>
 

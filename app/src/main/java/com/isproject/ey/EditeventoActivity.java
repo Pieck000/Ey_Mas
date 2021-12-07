@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Calendar;
 
 public class EditeventoActivity extends AppCompatActivity implements View.OnClickListener,
-        DatePickerDialog.OnDateSetListener{
+        DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener{
 
     Button btSave, btDele, btCancel;
     EditText etNombre, etFecha, etUbi, etHora;
@@ -39,6 +41,9 @@ public class EditeventoActivity extends AppCompatActivity implements View.OnClic
     DatePickerDialog dpg;
     Calendar calendar;
     private static int ANIO, MES,DIA;
+    //Hora
+    TimePickerDialog tpd;
+    private static int HORA, MIN;
     //FireB
     Evento evnt;
     FirebaseDatabase firebaseDatabase;
@@ -62,6 +67,13 @@ public class EditeventoActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId())
         {
+            case R.id.edit_hora_ede:
+                calendar = Calendar.getInstance();
+                HORA = calendar.get(Calendar.HOUR_OF_DAY);
+                MIN = calendar.get(Calendar.MINUTE);
+                tpd = new TimePickerDialog(this, this, HORA, MIN, true);
+                tpd.show();
+                break;
             case R.id.edit_fecha_ede:
                 calendar = Calendar.getInstance();
                 ANIO = calendar.get(Calendar.YEAR);
@@ -227,10 +239,16 @@ public class EditeventoActivity extends AppCompatActivity implements View.OnClic
         btDele.setOnClickListener(this);
         btCancel.setOnClickListener(this);
         etFecha.setOnClickListener(this);
+        etHora.setOnClickListener(this);
     }
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         etFecha.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        etHora.setText(hourOfDay+":"+minute);
     }
 }

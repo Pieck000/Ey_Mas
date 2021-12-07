@@ -70,18 +70,9 @@
         android:text="@string/out_perfil"
         android:textSize="18dp"
         app:icon="@drawable/ic_out"/>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bts_datos_per"
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="37dp"
-        android:textSize="15dp"
-        android:text="@string/correo_perfil"
-        app:iconTint="@color/purple_500"
-        android:layout_gravity="center"
-        app:icon="@drawable/ic_email"/>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/bts_correo_per"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="wrap_content"
         android:layout_height="37dp"

@@ -37,7 +37,7 @@ public class PerfilFragment extends Fragment implements View.OnClickListener{
         return new PerfilFragment();
     }
     //
-    Button btOut, btMail, btDatos;
+    Button btOut, btDatos;
     TextView tvNomb, tvCorreo, tvTel, tvFecha;
     //Fire
     FirebaseDatabase firebaseDatabase;
@@ -82,10 +82,8 @@ public class PerfilFragment extends Fragment implements View.OnClickListener{
     private void iniciarElementos(View root){
         btOut = root.findViewById(R.id.bt_logout_per);
         btDatos = root.findViewById(R.id.bts_datos_per);
-        btMail = root.findViewById(R.id.bts_correo_per);
         //
         btOut.setOnClickListener(this);
-        btMail.setOnClickListener(this);
         btDatos.setOnClickListener(this);
         //
         tvNomb = root.findViewById(R.id.tv_nom_per);
@@ -123,9 +121,9 @@ public class PerfilFragment extends Fragment implements View.OnClickListener{
                 getActivity().finish();
                 break;
             case R.id.bts_datos_per:
-                break;
-            case R.id.bts_correo_per:
-                //mAuth.getCurrentUser().updateEmail();
+                Intent intent1 = new Intent(getActivity(), EditarPerfil.class);
+                startActivity(intent1);
+                //getActivity().finish();
                 break;
         }
     }

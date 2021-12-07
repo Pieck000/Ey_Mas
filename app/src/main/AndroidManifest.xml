@@ -4,13 +4,14 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Ey"
-        android:hardwareAccelerated="true">
-        <activity android:name=".ui.invitado.EditarInvitado"></activity>
+        android:theme="@style/Theme.Ey">
+        <activity android:name=".ui.perfil.EditarPerfil"></activity>
+        <activity android:name=".ui.invitado.EditarInvitado" />
         <activity android:name=".ui.proveedor.EditarProovedor" />
         <activity android:name=".RecuperarActivity" />
         <activity android:name=".EditeventoActivity" />

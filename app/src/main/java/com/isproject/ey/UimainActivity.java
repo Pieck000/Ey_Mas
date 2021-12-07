@@ -29,13 +29,7 @@ public class UimainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarUimain.toolbar);
-        binding.appBarUimain.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -57,7 +51,7 @@ public class UimainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
+    /**/@Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_uimain);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)

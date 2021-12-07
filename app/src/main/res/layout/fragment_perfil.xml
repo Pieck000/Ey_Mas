@@ -69,7 +69,7 @@
         android:layout_marginTop="50dp"
         android:text="@string/out_perfil"
         android:textSize="18dp"
-        app:icon="@drawable/ic_out"/>
+        app:icon="@drawable/ic_exittoapp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/bts_datos_per"

@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ey">
-        <activity android:name=".ui.perfil.EditarPerfil"></activity>
+        <activity android:name=".ui.coanfi.EditCoanfiActivity"></activity>
+        <activity android:name=".ui.coanfi.AddCoanfiActivity" />
+        <activity android:name=".ui.perfil.EditarPerfil" />
         <activity android:name=".ui.invitado.EditarInvitado" />
         <activity android:name=".ui.proveedor.EditarProovedor" />
         <activity android:name=".RecuperarActivity" />

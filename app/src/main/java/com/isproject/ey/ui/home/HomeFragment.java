@@ -28,7 +28,11 @@ import com.isproject.ey.EditeventoActivity;
 import com.isproject.ey.HomeActivity;
 import com.isproject.ey.R;
 import com.isproject.ey.databinding.FragmentHomeBinding;
+import com.isproject.ey.firebase.Coanfitrion;
 import com.isproject.ey.firebase.Evento;
+import com.isproject.ey.firebase.Invitado;
+import com.isproject.ey.ui.coanfi.AddCoanfiActivity;
+import com.isproject.ey.ui.coanfi.EditCoanfiActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -37,7 +41,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
     //
-    Button btEdit, btEvts;
+    Button btEdit, btEvts, btCoanf;
     TextView tvNom, tvFech, tvUbi, tvHo, tvCB;
     ViewFlipper vfImgs;
     //Fire
@@ -47,6 +51,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     Evento evento;
     //
     String idEv;
+    boolean COAN = false;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -63,7 +68,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         for(int img: imgs){
             llenarFlipper(img);
         }
-        //
+        //Datos evento
         try {
                 databaseReference.child("Evento").child(idEv).addValueEventListener(new ValueEventListener() {
                 @Override
@@ -81,6 +86,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         }catch (Exception e){
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
+        //Coanfi
+        verificarCoanfitrion();
         return root;
     }
     private void iniciarCom(View root){
@@ -88,6 +95,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         btEdit.setOnClickListener(this);
         btEvts = root.findViewById(R.id.bts_evts_fh);
         btEvts.setOnClickListener(this);
+        btCoanf = root.findViewById(R.id.bts_coanf_fh);
+        btCoanf.setOnClickListener(this);
         //
         tvNom = root.findViewById(R.id.tv_frhome);
         tvFech = root.findViewById(R.id.tv_frhome_fech);
@@ -107,6 +116,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             mAuth = FirebaseAuth.getInstance();
         }catch(Exception e)
         {
+            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+    private void verificarCoanfitrion(){
+        try {
+            databaseReference.child("Coanfitrion").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                    for(DataSnapshot objtSnapshot: snapshot.getChildren()){
+                        Coanfitrion coan = objtSnapshot.getValue(Coanfitrion.class);
+                        if(coan.getIdEv().equals(idEv)){
+                            COAN = true;
+                        }
+                    }
+                }
+                @Override
+                public void onCancelled(@NonNull @NotNull DatabaseError error) {}
+            });
+        }catch (Exception e){
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
@@ -136,12 +164,24 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 intent1.putExtra("idEv",idEv);
                 startActivity(intent1);
                 getActivity().finish();
-                Toast.makeText(getContext(), "Edit!", Toast.LENGTH_LONG).show();
                 break;
             case R.id.bts_evts_fh:
                 Intent intent = new Intent(getActivity(), HomeActivity.class);
                 startActivity(intent);
                 getActivity().finish();
+                break;
+            case R.id.bts_coanf_fh:
+                if(!COAN){
+                    Intent intent2 = new Intent(getActivity(), AddCoanfiActivity.class);
+                    intent2.putExtra("idEv",idEv);
+                    startActivity(intent2);
+                    getActivity().finish();
+                }else{
+                    Intent intent2 = new Intent(getActivity(), EditCoanfiActivity.class);
+                    intent2.putExtra("idEv",idEv);
+                    startActivity(intent2);
+                    getActivity().finish();
+                }
                 break;
         }
     }

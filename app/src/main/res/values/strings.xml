@@ -70,6 +70,7 @@
 
     <string name="fh_edit">Editar Evento</string>
     <string name="fh_evts">Mis Eventos</string>
+    <string name="fh_coanf">Coanfitrion</string>
 
     <string name="title_inv">Invitados</string>
     <string name="correo_inv">Correo</string>

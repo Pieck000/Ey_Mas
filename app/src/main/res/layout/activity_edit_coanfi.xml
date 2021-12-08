@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".ui.coanfi.EditCoanfiActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Coanfitrion"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/purple_700"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Completo"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"/>
+    <EditText
+        android:id="@+id/edit_nom_edco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Julia Díaz Peréz"
+        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/correo_inv"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"/>
+    <EditText
+        android:id="@+id/edit_correo_edco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/app_correo_hint"
+        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="18dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Codigo de Acceso"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_codigo_edco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/bt_edit_edco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:text="Guardar"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        app:icon="@drawable/ic_save"
+        android:layout_marginHorizontal="5dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bts_delete_edco"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="Eliminar Coanfitrion"
+        app:iconTint="@color/purple_500"
+        android:layout_gravity="center"
+        app:icon="@drawable/ic_delete"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bts_cancel_edco"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="@string/rev_back"
+        app:iconTint="@color/purple_500"
+        android:layout_gravity="center"
+        app:icon="@drawable/ic_back"/>
+
+</LinearLayout>

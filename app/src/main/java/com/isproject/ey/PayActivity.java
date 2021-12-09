@@ -54,7 +54,6 @@ public class PayActivity extends AppCompatActivity implements View.OnClickListen
                     intent.putExtra("pqt",pqt);
                     startActivity(intent);
                     finish();
-                    Toast.makeText(this, ""+pqt, Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.bt_back_pay:

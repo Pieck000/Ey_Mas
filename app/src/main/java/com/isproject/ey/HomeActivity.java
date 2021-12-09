@@ -76,7 +76,6 @@ public class HomeActivity extends AppCompatActivity {
                     try {
                         evento = (Evento)parent.getItemAtPosition(position);
                         String idEv = evento.getIdEVento().toString();
-                        Toast.makeText(HomeActivity.this, ""+idEv,Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(HomeActivity.this, UimainActivity.class);
                         intent.putExtra("idEv", idEv);
                         startActivity(intent);

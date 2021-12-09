@@ -114,7 +114,7 @@ public class EventoActivity extends AppCompatActivity
                         evnt.setHora(hora);
                         evnt.setUbicacion(ubi);
                         evnt.setPaquete(pqt);
-                        Toast.makeText(this, "pqt: "+pqt+" idE: "+idEv+" idanf: "+idAnfi, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(this, "pqt: "+pqt+" idE: "+idEv+" idanf: "+idAnfi, Toast.LENGTH_LONG).show();
                         databaseReference.child("Evento").child(idEv).setValue(evnt).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {

@@ -31,6 +31,7 @@ public class LoginCoanfiActivity extends AppCompatActivity implements View.OnCli
     DatabaseReference databaseReference;
     //
     Coanfitrion co;
+    boolean bn=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,11 +82,12 @@ public class LoginCoanfiActivity extends AppCompatActivity implements View.OnCli
                                         intent.putExtra("idEv",co.getIdEv().toString());
                                         startActivity(intent);
                                         finish();
-                                    }else {
-                                        Toast.makeText(LoginCoanfiActivity.this, "Credenciales Invalidas", Toast.LENGTH_LONG).show();
+                                        bn =true;
                                     }
                                 }
-
+                                if(!bn){
+                                    Toast.makeText(LoginCoanfiActivity.this, "Credenciales Invalidas", Toast.LENGTH_SHORT).show();
+                                }
                             }
                             @Override
                             public void onCancelled(@NonNull @NotNull DatabaseError error) {}

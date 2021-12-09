@@ -222,6 +222,7 @@ public class InvCoanfitrionActivity extends AppCompatActivity implements View.On
                     Toast.makeText(this, "Asigna No. de mesa", Toast.LENGTH_LONG).show();
                     return false;
                 }else {
+                    limiteInv();
                     int limpases = 0;
                     int pases = Integer.parseInt(etPases.getText().toString());
                     switch (lim){
@@ -238,8 +239,8 @@ public class InvCoanfitrionActivity extends AppCompatActivity implements View.On
                             limpases = 1000;
                             break;
                     }
-                    if(limpases-(conteoPases+pases) <= 0){
-                        Toast.makeText(this, "Limite de pases Excedido ", Toast.LENGTH_LONG).show();
+                    if(limpases-(conteoPases+pases) < 0){
+                        Toast.makeText(InvCoanfitrionActivity.this, "Limite de pases Excedido ", Toast.LENGTH_LONG).show();
                         return false;
                     }
                     else {

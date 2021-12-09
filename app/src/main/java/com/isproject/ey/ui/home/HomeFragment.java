@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                     tvNom.setText(evento.getNombre().toString());
                     tvUbi.setText("Dirección: "+evento.getUbicacion().toString());
                     tvFech.setText("Fecha: "+evento.getFecha().toString());
-                    tvHo.setText("Hora: "+evento.getHora().toString());
+                    tvHo.setText("Hora: "+evento.getHora().toString()+"\n Paquete "+evento.getPaquete());
                 }
                 @Override
                 public void onCancelled(@NonNull @NotNull DatabaseError error) {}

@@ -7,8 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +33,7 @@ public class CoanfitrionActivity extends AppCompatActivity implements View.OnCli
     //FireB
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    ViewFlipper vfImgs;
     //
     Evento evnt;
     String idEv;
@@ -45,6 +48,10 @@ public class CoanfitrionActivity extends AppCompatActivity implements View.OnCli
         iniciarFB();
         llenarDatos();
         //
+        int imgs [] = {R.raw.imgey1, R.raw.imgey2, R.raw.imgey3};
+        for(int img: imgs){
+            llenarFlipper(img);
+        }
     }
     private void iniciarElementos(){
         btInv = findViewById(R.id.bt_inv_can);
@@ -60,6 +67,9 @@ public class CoanfitrionActivity extends AppCompatActivity implements View.OnCli
         tvFecha = findViewById(R.id.tv_fech_can);
         tvUbi = findViewById(R.id.tv_ubi_can);
         tvHora = findViewById(R.id.tv_time_can);
+        //
+        vfImgs = findViewById(R.id.vf_imgs_can);
+
     }
     private void llenarDatos(){
         try{
@@ -71,7 +81,7 @@ public class CoanfitrionActivity extends AppCompatActivity implements View.OnCli
                     tvNom.setText(evnt.getNombre().toString());
                     tvFecha.setText("Fecha: "+evnt.getFecha().toString());
                     tvUbi.setText("Dirección: "+evnt.getUbicacion().toString());
-                    tvHora.setText("Hora: "+evnt.getHora().toString());
+                    tvHora.setText("Hora: "+evnt.getHora().toString()+"\n Paquete "+evnt.getPaquete());
                 }
                 @Override
                 public void onCancelled(@NonNull @NotNull DatabaseError error) {}
@@ -104,6 +114,17 @@ public class CoanfitrionActivity extends AppCompatActivity implements View.OnCli
                 finish();
                 break;
         }
+    }
+    private void llenarFlipper(int img){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(img);
+        //
+        vfImgs.addView(imageView);
+        vfImgs.setFlipInterval(3000);
+        vfImgs.setAutoStart(true);
+        //
+        vfImgs.setInAnimation(this, android.R.anim.slide_in_left);
+        vfImgs.setOutAnimation(this, android.R.anim.slide_out_right);
     }
     private void iniciarFB()
     {

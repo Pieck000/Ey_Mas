@@ -68,7 +68,6 @@ public class PaquetesActivity extends AppCompatActivity implements View.OnClickL
                     Intent intent = new Intent(PaquetesActivity.this, PayActivity.class);
                     intent.putExtra("pqt",rbt);
                     intent.putExtra("usuR", usuR);
-                    Toast.makeText(this, ""+rbt, Toast.LENGTH_LONG).show();
                     startActivity(intent);
                     finish();
                 }catch (Exception e){

@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.isproject.ey.MainActivity;
 import com.isproject.ey.R;
 import com.isproject.ey.firebase.Coanfitrion;
 import com.isproject.ey.firebase.Evento;
@@ -25,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class CoanfitrionActivity extends AppCompatActivity implements View.OnClickListener {
     //
-    Button btInv, btProv, btCad;
+    Button btInv, btProv, btCad, btOut;
     TextView tvNom, tvFecha, tvHora, tvUbi;
     //FireB
     FirebaseDatabase firebaseDatabase;
@@ -52,6 +53,8 @@ public class CoanfitrionActivity extends AppCompatActivity implements View.OnCli
         btProv.setOnClickListener(this);
         btCad = findViewById(R.id.bts_scan_can);
         btCad.setOnClickListener(this);
+        btOut = findViewById(R.id.bts_out_can);
+        btOut.setOnClickListener(this);
         //
         tvNom = findViewById(R.id.tv_can);
         tvFecha = findViewById(R.id.tv_fech_can);
@@ -94,6 +97,11 @@ public class CoanfitrionActivity extends AppCompatActivity implements View.OnCli
                 Intent intent2 = new Intent(CoanfitrionActivity.this, CadCoanfitrionActivity.class);
                 intent2.putExtra("idEv",idEv.toString());
                 startActivity(intent2);
+                break;
+            case R.id.bts_out_can:
+                Intent intent3 = new Intent(CoanfitrionActivity.this, MainActivity.class);
+                startActivity(intent3);
+                finish();
                 break;
         }
     }

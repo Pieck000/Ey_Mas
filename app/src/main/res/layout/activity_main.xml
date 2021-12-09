@@ -46,7 +46,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="@string/app_login"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        app:icon="@drawable/ic_login"/>
 
     <TextView
         android:layout_width="wrap_content"

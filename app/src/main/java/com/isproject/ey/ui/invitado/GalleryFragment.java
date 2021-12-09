@@ -181,6 +181,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                         if(in.getIdEvnt().equals(idEv))
                         {
                             conteoPases = conteoPases+ in.getPases();
+                            System.out.println(conteoPases);
                             listaInvitado.add(in);
                         }
 
@@ -230,6 +231,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                         inv.setIdInvitado(idInv);
                         inv.setNombreFamilia(nom);
                         inv.setCorreo(corr);
+
                         inv.setPases(pases);
                         inv.setMesa(mesa);
                         if(rbYN.isChecked()){
@@ -284,6 +286,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                     Toast.makeText(getContext(), "Asigna No. de mesa", Toast.LENGTH_LONG).show();
                     return false;
                 }else {
+                   limiteInv();
                     int limpases = 0;
                     int pases = Integer.parseInt(etPases.getText().toString());
                     switch (lim){
@@ -300,7 +303,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener{
                             limpases = 1000;
                             break;
                     }
-                    if(limpases-(conteoPases+pases) <= 0){
+                    if(limpases-(conteoPases+pases) < 0){
                         Toast.makeText(getContext(), "Limite de pases Excedido ", Toast.LENGTH_LONG).show();
                         return false;
                     }

@@ -33,7 +33,6 @@ public class CadeneroFragment extends Fragment {
     //
     Button btScan;
     TextView tvScan;
-    //IntentResult result;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -63,7 +62,7 @@ public class CadeneroFragment extends Fragment {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if(result != null) {
             if(result.getContents() == null) {
-                Toast.makeText(getContext(), "Cancelled", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Escaneo Cancelado", Toast.LENGTH_LONG).show();
             } else {
                 tvScan.setText(result.getContents());
             }

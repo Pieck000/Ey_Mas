@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="25dp"
-    tools:context=".LoginActivity">
+    tools:context=".coanfitrion.LoginCoanfiActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="30dp"
-        android:text="@string/app_name"
+        android:text="Coanfitrion Ey+"
         android:textColor="@color/purple_700"
-        android:textSize="100dp"
+        android:textSize="40dp"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:textSize="20dp"
         android:layout_marginHorizontal="20dp"/>
     <EditText
-        android:id="@+id/edit_correo_lg"
+        android:id="@+id/edit_correo_lgca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/app_correo_hint"
@@ -36,12 +36,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_password"
+        android:text="@string/cod_lgca"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginHorizontal="20dp"/>
     <EditText
-        android:id="@+id/edit_password_lg"
+        android:id="@+id/edit_password_lgca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/app_password_hint"
@@ -50,16 +50,16 @@
         android:textSize="18dp"
         android:layout_gravity="center"/>
     <Button
-        android:id="@+id/bt_login_lg"
+        android:id="@+id/bt_login_lgca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="@string/app_login"
+        android:layout_marginTop="40dp"
+        android:text="Acceder"
         android:textSize="20dp"
         app:icon="@drawable/ic_login"/>
     <Button
-        android:id="@+id/bt_back_lg"
+        android:id="@+id/bt_back_lgca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -67,40 +67,4 @@
         android:textSize="20dp"
         app:icon="@drawable/ic_back"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="@string/app_recutext"/>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/bts_recuperar_lg"
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="37dp"
-        android:textSize="15dp"
-        android:text="@string/app_recupera"
-        app:iconTint="@color/purple_500"
-        android:layout_gravity="center"
-        app:icon="@drawable/ic_restore"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="¿Eres coanfitrion?"/>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/bts_coanfi_lg"
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:layout_width="wrap_content"
-        android:layout_height="37dp"
-        android:textSize="15dp"
-        android:text="Acceder"
-        app:iconTint="@color/purple_500"
-        android:layout_gravity="center"
-        app:icon="@drawable/ic_connect"/>
 </LinearLayout>

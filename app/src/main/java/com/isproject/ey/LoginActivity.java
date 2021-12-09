@@ -17,10 +17,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.isproject.ey.coanfitrion.LoginCoanfiActivity;
 import com.isproject.ey.firebase.Usuario;
 
 public class LoginActivity extends AppCompatActivity {
-    Button btLogin, btBack, btRecu;
+    Button btLogin, btBack, btRecu, btCoan;
     EditText etCorreo, etPass;
     //Fire
     FirebaseDatabase firebaseDatabase;
@@ -79,6 +80,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RecuperarActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        //
+        btCoan = findViewById(R.id.bts_coanfi_lg);
+        btCoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, LoginCoanfiActivity.class);
                 startActivity(intent);
                 finish();
             }

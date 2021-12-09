@@ -64,7 +64,7 @@
     <string name="menu_home">Mi Evento</string>
     <string name="menu_gallery">Invitados</string>
     <string name="menu_slideshow">Mesas</string>
-    <string name="menu_proovedor">Proovedores</string>
+    <string name="menu_proovedor">Proveedores</string>
     <string name="menu_cadenero">Cadenero</string>
     <string name="menu_perfil">Mi Perfil</string>
 
@@ -112,6 +112,12 @@
     <string name="contra_perfil">Editar Información</string>
 
     <string name="edit_perfil">Editar Información</string>
+
+    <string name="inv_can">Invitados</string>
+    <string name="prov_can">Proveedores</string>
+    <string name="scan_can">Cadenero</string>
+
+    <string name="cod_lgca">Codigo</string>
 
 
 </resources>

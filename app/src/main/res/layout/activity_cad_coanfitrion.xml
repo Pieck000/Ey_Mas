@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".coanfitrion.CadCoanfitrionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tittle_cadenero"
+        android:textSize="35dp"
+        android:textColor="@color/purple_700"
+        android:gravity="center"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/tv_scan_cadco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+    <Button
+        android:id="@+id/bt_scan_cadco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:text="@string/icon_cadenero"
+        android:textSize="18dp"
+        app:icon="@drawable/ic_qr"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bts_back_cadco"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Atras"
+        app:iconTint="@color/purple_500"
+        android:layout_gravity="center"
+        app:icon="@drawable/ic_back"/>
+
+</LinearLayout>
